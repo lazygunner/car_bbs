@@ -153,13 +153,13 @@ if($isfounder) {
 
 	$view_mastermobile = !empty($save_mastermobile) ? substr($save_mastermobile, 0 , 3).'*****'.substr($save_mastermobile, -3) : '';
 }
-
+/*
 if($securityadvise) {
 	showtableheader('home_security_tips', '', '', 0);
 	showtablerow('', 'class="tipsblock"', '<ul>'.$securityadvise.'</ul>');
 	showtablefooter();
 }
-
+*/
 $onlines = '';
 $admincp_session = C::t('common_admincp_session')->fetch_all_by_panel(1);
 $members = C::t('common_member')->fetch_all(array_keys($admincp_session), false, 0);
@@ -167,11 +167,12 @@ foreach($admincp_session as $uid => $online) {
 	$onlines .= '<a href="home.php?mod=space&uid='.$online['uid'].'" title="'.dgmdate($online['dateline']).'" target="_blank">'.$members[$uid]['username'].'</a>&nbsp;&nbsp;&nbsp;';
 }
 
-
+/*
 echo '<div id="boardnews"></div>';
 
 echo '<style>.rssbook{margin:8px 0 0 25px;}</style>';
 echo '<script >var nId = "4d1e7b6dd9c5070d1a82aeb8be5e72fc64db42701a1bc4d4",nWidth="400px",sColor="light",sText="'.cplang('subscribe_comsenz_email').'" ;</script><script src="http://list.qq.com/zh_CN/htmledition/js/qf/page/qfcode.js" charset="gb18030"></script>';
+
 showtableheader('', 'nobottom fixpadding');
 if($membersmod || $threadsmod || $postsmod || $medalsmod || $blogsmod || $picturesmod || $doingsmod || $sharesmod || $commentsmod || $articlesmod || $articlecommentsmod || $topiccommentsmod || $threadsdel || !empty($verify)) {
 	showtablerow('', '', '<h3 class="left margintop">'.cplang('home_mods').': </h3><p class="left difflink">'.
@@ -194,7 +195,7 @@ if($membersmod || $threadsmod || $postsmod || $medalsmod || $blogsmod || $pictur
 	);
 }
 showtablefooter();
-
+*/
 showtableheader('home_onlines', 'nobottom fixpadding');
 echo '<tr><td>'.$onlines.'</td></tr>';
 showtablefooter();
@@ -259,7 +260,7 @@ showtablerow('', array('class="vtop td24 lineheight"', 'class="lineheight smallf
 	$attachsize
 ));
 showtablefooter();
-
+/*
 showtableheader('home_dev', 'fixpadding');
 showtablerow('', array('class="vtop td24 lineheight"'), array(
 	cplang('home_dev_copyright'),
@@ -326,7 +327,7 @@ showtablerow('', array('class="vtop td24 lineheight"', 'class="lineheight"'), ar
 		<a href="http://www.discuz.net/" class="lightlink2" target="_blank">&#x8BA8;&#x8BBA;&#x533A;</a>'
 ));
 showtablefooter();
-
+*/
 echo '</div>';
 
 ?>
