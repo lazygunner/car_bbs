@@ -245,7 +245,7 @@ if($isfounder) {
 		array('menu_founder_perm', 'founder_perm'),
 		array('menu_setting_mail', 'setting_mail'),
 		array('menu_patch', 'patch'),
-		array('menu_setting_uc', 'setting_uc'),
+//		array('menu_setting_uc', 'setting_uc'),
 		array('menu_db', 'db_export'),
 		array('menu_membersplit', 'membersplit_check'),
 		array('menu_postsplit', 'postsplit_manage'),
@@ -254,7 +254,7 @@ if($isfounder) {
 		array('menu_optimizer', 'optimizer_performance'),
 	);
 
-	$menu['uc'] = array();
+//	$menu['uc'] = array();
 }
 
 if(!isfounder() && !isset($GLOBALS['admincp']->perms['all'])) {

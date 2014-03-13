@@ -96,7 +96,7 @@ foreach($topmenu as $k => $v) {
 	}
 	showheader($k, $v);
 }
-
+/*
 $uc_api_url = '';
 if($isfounder) {
 	loaducenter();
@@ -104,7 +104,7 @@ if($isfounder) {
 	echo '<li><em><a id="header_uc" hidefocus="true" href="'.UC_API.'/admin.php?m=frame" onmouseover="previewheader(\'uc\')" onmouseout="previewheader()" onclick="uc_login=1;toggleMenu(\'uc\', \'\');doane(event);">'.cplang('header_uc').'</a></em></li>';
 	$topmenu['uc'] = '';
 }
-
+*/
 $headers = "'".implode("','", array_keys($topmenu))."'";
 
 echo <<<EOT
